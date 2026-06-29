@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="data">获取数据</button>
+    <button id="cookie">获取cookie</button>
+    <div id="dataMessage" class="hide"></div>
+    <div id="cookieMessage" class="hide"></div>
+
+    <script>
+        const dataBtn = document.querySelector('#data')
+        const dataMessage = document.querySelector('#dataMessage')
+        const cookieBtn = document.querySelector('#cookie')
+        const cookieMessage = document.querySelector('#cookieMessage')
+
+        dataBtn.addEventListener('click', () => {
+            let query = location.search.slice(1)
+            let arr = query.split('=')
+            dataMessage.classList.toggle('.hide')
+            dataMessage.innerHTML = `传递参数：${arr[0]} - ${arr[1]}`
+        })
+        cookieBtn.addEventListener('click', () => {
+            cookieMessage.classList.toggle('.hide')
+            cookieMessage.innerHTML = document.cookie
+        })
+    </script>
+</body>
+
+</html>
