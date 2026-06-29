@@ -24,6 +24,8 @@
         const cookieBtn = document.querySelector('#cookie')
         const cookieMessage = document.querySelector('#cookieMessage')
 
+        document.cookie = 'username=lin'
+
         dataBtn.addEventListener('click', () => {
             let query = location.search.slice(1)
             let arr = query.split('=')
