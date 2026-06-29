@@ -27,11 +27,11 @@
         dataBtn.addEventListener('click', () => {
             let query = location.search.slice(1)
             let arr = query.split('=')
-            dataMessage.classList.toggle('.hide')
+            dataMessage.classList.toggle('hide')
             dataMessage.innerHTML = `传递参数：${arr[0]} - ${arr[1]}`
         })
         cookieBtn.addEventListener('click', () => {
-            cookieMessage.classList.toggle('.hide')
+            cookieMessage.classList.toggle('hide')
             cookieMessage.innerHTML = document.cookie
         })
     </script>
